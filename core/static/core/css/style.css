@@ -1,0 +1,193 @@
+/* fontes */
+.poppins-regular {
+font-family: "Poppins", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.poppins-semibold {
+font-family: "Poppins", sans-serif;
+font-weight: 600;
+font-style: normal;
+}
+
+.poppins-bold {
+font-family: "Poppins", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.poppins-extrabold {
+font-family: "Poppins", sans-serif;
+font-weight: 800;
+font-style: normal;
+}
+
+.poppins-black {
+font-family: "Poppins", sans-serif;
+font-weight: 900;
+font-style: normal;
+}
+
+
+/* Configurações gerais */
+
+body {
+padding: 0;
+box-sizing: border-box;
+background-color: #F8F6F6;
+font-family: "Poppins", sans-serif;
+font-weight: 600;
+font-style: normal;
+margin: 2% 4%;
+}
+
+/* Configs cabeçario */
+
+.cabecario{
+display:flex;
+justify-content: space-between;
+}
+
+.logo-titulo{
+display: flex;
+align-items: center;
+}
+.logo-titulo img {
+width: 75px;
+height: 75px;
+}
+
+.logo-titulo p{
+font-family: "Poppins", sans-serif;
+font-weight: 800;
+font-style: normal;
+font-size: 1.4em;
+}
+
+.menu-desktop ul{
+list-style: none;
+display: flex;
+gap: 2.2em;
+}
+
+.menu-desktop li{
+font-size: 1.2em;
+color: #2A2A2A;
+transition: transform 0.5s ease, color 0.5s ease;
+cursor: pointer;
+will-change: transform;
+}
+
+.menu-desktop li:hover{
+transform: scale(1.2);
+color: #8B32F4;
+}
+
+/* Conteúdo principal */
+
+.container-principal{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-left: 1em;
+height: 80vh; 
+
+}
+
+.container-principal h1{
+width: 9em;
+font-weight: 600;
+font-size: 3em;
+}
+
+.container-principal button {
+width: 240px;
+height: 60px;
+border-radius: 1em;
+background-color: #8B32F4;
+overflow: hidden;
+border: none;
+}
+
+.container-principal button {
+font-size: 1.1em;
+font-weight: 700;
+color: #FFFFFF;
+cursor: pointer;
+transition: transform 0.5s ease, color 0.5s ease;
+will-change: transform;
+box-shadow: 2px 2px 6px #0000009d;
+}
+
+.container-principal button:hover {
+background-color: rgb(120, 59, 189);
+transform: scale(1.1);
+}
+
+/* imagem principal */
+
+.imagem-principal {
+width: 50em;
+height: 33em;
+border-radius: 2em;
+background-color: #583C78;
+background: linear-gradient(to bottom, #583C78, #46068f);
+box-shadow: 2px 2px 8px #11061f93;
+
+display: flex;
+align-items: center;
+justify-content: center;
+animation: subir 1s ease-out;
+}
+
+.imagem-principal img {
+width: 90%;
+height: auto;
+animation: subir 1.5s ease-out;
+animation: flutuar 2s ease-in-out infinite;
+}
+
+.seta {
+display: flex;
+align-items: center;
+justify-content: center;
+transition: 0.5s;
+will-change: transform;
+margin-top: -50px;
+}
+
+.seta:hover{
+transform: scale(1.2);
+}
+
+.seta img {
+width: 2.5em;
+height: 2.5em;
+cursor: pointer;
+}
+
+/* Ajustes e animações */
+
+@keyframes subir {
+from {
+    opacity: 0;  
+    transform: translateY(50px);
+}
+to {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+}
+
+@keyframes flutuar {
+0% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-12px); 
+}
+100% {
+    transform: translateY(0); 
+}
+}
