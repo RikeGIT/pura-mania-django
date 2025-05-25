@@ -32,21 +32,27 @@
                 <form method="post" novalidate>
                     {% csrf_token %}
 
-                    <div class="input-container">
+                    <div class="input-container {% if form.username.errors %}input-container-error{% endif %}">
                         <i class="fa fa-user"></i>
                         {{ form.username.label_tag }}
                         {{ form.username }}
-                        {% for error in form.username.errors %}
-                            <div class="text-danger small">{{ error }}</div>
-                        {% endfor %}
                     </div>
 
-                    <div class="input-container">
+                    <div class= "error-container">
+                            {% for error in form.username.errors %}
+                            <div class="text-error">{{ error }}</div>
+                            {% endfor %}
+                    </div>
+
+                    <div class="input-container {% if form.password.errors %}input-container-error{% endif %}">
                         <i class="fa fa-lock"></i>
                         {{ form.password.label_tag }}
                         {{ form.password }}
+                    </div>
+
+                    <div class= "error-container">
                         {% for error in form.password.errors %}
-                            <div class="text-danger small">{{ error }}</div>
+                        <div class="text-error">{{ error }}</div>
                         {% endfor %}
                     </div>
 

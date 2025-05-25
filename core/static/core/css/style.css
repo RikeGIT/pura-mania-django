@@ -167,6 +167,10 @@ height: 2.5em;
 cursor: pointer;
 }
 
+.link-menu a{
+    text-decoration: none;
+}
+
 /* Ajustes e animações */
 
 @keyframes subir {
