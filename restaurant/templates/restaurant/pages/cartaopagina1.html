@@ -1,0 +1,21 @@
+{% load static %}
+{% include "restaurant/partials/head.html"%}
+{% include "restaurant/partials/header.html"%}
+
+    <main class="main-tela-cartao">
+        <section>
+            <h1>Pague sem complicações</h1>
+            <p>É prático, seguro e você não perde nenhum <br>
+             minuto a mais quando seu pedido chegar.</p>
+             <br>
+            <button class="botoa_adicionar_novo_cartao"> <a href="{% url 'cartaopagina2' %}">Adicionar novo cartão</a>  </button>
+        </section>
+        
+        <div>
+             <img src="{% static 'images/Imagem.png' %}" alt="">
+        </div>
+       
+    </main>
+</body>
+
+</html>

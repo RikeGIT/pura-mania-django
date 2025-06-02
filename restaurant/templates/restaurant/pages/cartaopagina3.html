@@ -1,0 +1,30 @@
+{% load static %}
+{% include "restaurant/partials/head.html"%}
+{% include "restaurant/partials/header.html"%}
+
+    <main class="main-escolha-de-cartoes">
+        
+        
+        <form action="" class="form-cadastro-cartao">
+            <a class="botao-voltar" href="{% url 'cartaopagina2' %}">
+                <img class="imagem-voltar" src="{% static 'images/Voltar.png' %}" alt="">
+                <h4 class="h4-pagina-cadastro-cartao">Crédito</h4>
+            </a>
+            <input class="inputs-cadastro-cartao" type="text" placeholder="Nome do cartão">
+            <input class="inputs-cadastro-cartao" type="number" placeholder="Número do cartão">
+            <input class="inputs-cadastro-cartao" type="number" placeholder="Número do cartão">
+            <input class="inputs-cadastro-cartao" type="text" placeholder="Número do cartão">
+            <section class="bloco-informacoes-cartao">
+                <input class="inputs-cartao-informacoes" type="number" placeholder="Validade">
+                <input class="inputs-cartao-informacoes" type="number" placeholder="CVV">
+            </section>
+            <input class="inputs-cadastro-cartao" type="text" placeholder="Apelido do cartão">
+            <input class="inputs-cadastro-cartao" type="text" name="cpf" placeholder="CPF/CNPJ do titular">
+            <button class="botao-pagina-cadastro-cartao"> Adicionar </button>
+        </form>
+        
+       
+    </main>
+</body>
+
+</html>

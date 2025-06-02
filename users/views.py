@@ -13,6 +13,9 @@ class UserRegisterView(CreateView):
 # view generica do django para login usuarios
 class UserLoginView(LoginView):
     template_name = 'users/pages/login.html'
+    def get_success_url(self):
+        return reverse_lazy('home')
+    
 
 # view generica do django para logout
 class UserLogoutView(LogoutView):

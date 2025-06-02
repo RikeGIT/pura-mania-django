@@ -1,0 +1,56 @@
+{% load static %}
+{% include "restaurant/partials/head.html"%}
+{% include "restaurant/partials/header.html"%}
+
+    <main class="main-content">
+        <div class="bem-vindo">
+            <h2>Olá Usuario,</h2>
+            <h1>Bem vindo ao <strong>Pura mania</strong></h1>
+        </div>
+
+        <section class="ad-container">
+            <div class="ad-text">
+                <h1>Faça seu primeiro pedido e ganhe 50% off</h1>
+                <h2>faça um pedido até de 100R$ e aproveite seu desconto</h2>
+                <button href="" class="ad-button"><strong>Peça agora</strong></button>
+            </div>
+
+            <div class="ad-image">
+                <img src="{% static 'images/acai-ad.png' %}" alt="">
+            </div>
+        </section>
+
+        <section class="menu-container">
+            <h2>Menu</h2>
+            <div class="filtro-tags">
+            {% for tag in tags %}
+                <div class = "tag-div">
+                    <a href="?tag={{ tag.nome }}" class="{% if tag.nome == tag_selecionada %}ativo{% endif %}">
+                        {% if tag.nome == "No copo" %}<i class="fa-solid fa-glass-whiskey"></i> <strong>{{ tag.nome }}</strong>{% endif %}
+                        {% if tag.nome == "Na tigela" %}<i class="fa-solid fa-bowl-food"></i> <strong>{{ tag.nome }}</strong>{% endif %}
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+
+            <ul class="pratos-container">
+                {% for prato in pratos %}
+                    <li class="pratos-div">
+                        {% if prato.imagem %}
+                            <img src="{{ prato.imagem.url }}" alt="{{ prato.nome }}" class="prato-imagem">
+                        {% endif %}
+                        <div class="infos-prato">
+                            <h3 class="prato-nome"><strong>{{ prato.nome }}</strong></h3>
+                            <p><strong>Preço:</strong> R$ {{ prato.preco }}</p>
+                            <p>{{ prato.descricao }}</p>
+                        </div>
+                    </li>
+                {% empty %}
+                    <li>Nenhum prato encontrado.</li>
+                {% endfor %}
+            </ul>
+
+        </section>
+    </main>
+</body>
+</html>

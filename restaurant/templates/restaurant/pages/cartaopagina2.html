@@ -1,0 +1,24 @@
+{% load static %}
+{% include "restaurant/partials/head.html"%}
+{% include "restaurant/partials/header.html"%}
+
+    <main class="main-escolha-de-cartoes">
+        <h1 class="h1_pagina2">Escolha um meio de pagamento</h1>
+        
+        <a class="opcoes-cartao" href="{% url 'cartaopagina3' %}" style="text-decoration: none; color: inherit;">
+            <div class="circulo-card">
+                <img class="imagem-cartoes" src="{% static 'images/Card.png' %}" alt="">
+            </div>
+            <p>Crédito</p>
+        </a>
+        <a class="opcoes-cartao" href="{% url 'cartaopagina3' %}" style="text-decoration: none; color: inherit;">
+            <div class="circulo-card">
+                <img class="imagem-cartoes" src="{% static 'images/Card2.png' %}" alt="">
+            </div>
+            <p>Dédito</p>
+        </a>    
+       
+    </main>
+</body>
+
+</html>

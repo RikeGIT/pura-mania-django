@@ -1,0 +1,28 @@
+{% load static %}
+<body class="body_cartao">
+    <header>
+        <div class="sidebar-container">
+            <ul class="sidebar-list">
+                <li class="sidebar-button">
+                <a href={% url 'home' %}>
+                    <img src="{% static 'images/logo.png' %}" alt="">
+                </a>  
+                </li>
+                <li class="sidebar-button">
+                    <a href=""><i class="fa-solid fa-phone sidebar-icon"></i></a>
+                </li>
+                <li class="sidebar-button">
+                    <a href=""><i class="fa-solid fa-utensils sidebar-icon"></i></a>
+                </li>
+                <li class="sidebar-button">
+                    <a href={% url 'cartaopagina1' %}><i class="fa-solid fa-credit-card sidebar-icon"></i></a>
+                </li>
+                <li class="sidebar-button">
+                    <a href=""><i class="fa-solid fa-user sidebar-icon"></i></a>
+                </li>
+                <li class="sidebar-button">
+                    <a href=""><i class="fa-solid fa-heart sidebar-icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </header>
